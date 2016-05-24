@@ -25,3 +25,7 @@
     .jumbotron .lang-logo img {
       max-width: 100%; }
 
+#panorama {
+    width: 100%;
+    height: 400px;
+}
