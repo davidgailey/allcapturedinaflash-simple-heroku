@@ -47,6 +47,11 @@
   }
 }
 
+@media (max-width: 640px) { 
+  .tele-button {font-size: 4vw;}
+}
+
+
 footer {
   background-color: #222;
   color: #999;
