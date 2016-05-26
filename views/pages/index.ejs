@@ -18,22 +18,53 @@
 
   </div>
 </div>
-<div class="container-fluid">
-    
-  
+
+<div class="container">
   <div class="row">
-    <div class="col-xs-12">
-      <h3><span class="glyphicon glyphicon-map-marker"></span> "The Diamond", Hollidaysburg, Pa</h3>
-      <div id="panorama" class="embed-responsive embed-responsive-4by3"></div>
+    
+    <div class="col-sm-6 pano-thumb">  
+      <!-- Button trigger modal -->
+
+      <a href="#myModal" 
+         
+        data-toggle="modal" 
+        data-target="#myModal">
+          <img src="/images/diamond-500.jpg" 
+            alt="Panorama of The Diamond in Hollidaysburg, Pa" 
+            class="img-responsive img-thumbnail center-block"
+          />
+      </a>
+    </div>
+    <div class="col-sm-6 pano-description">
+      <h4><span class="glyphicon glyphicon-map-marker"></span> "The Diamond", Hollidaysburg, Pa</h4>
+      <p>"The Diamond" is historic Hollidaysburg’s central business district.  It is the heart of the community for parades, events and other happenings. </p>
     </div>
   </div> <!-- row -->
-  <br><br><br>
-  <hr>
-  <br>
+  <br><br><br><br>
   <!-- 
   
-  <div class="alert alert-info text-center" role="alert"> -->
+  <div class="alert alert-info text-center" role="alert"> 
     
+  </div>-->
+</div>
+
+<!-- Modal -->
+<div class="modal fade" 
+  id="myModal" 
+  tabindex="-1" 
+  role="dialog" 
+  aria-labelledby="myModalLabel"
+  data-panorama="/images/diamondwm-4096.jpg">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">"The Diamond", Hollidaysburg, Pa</h4>
+      </div>
+      <div class="modal-body">
+        <div id="panorama" class="embed-responsive embed-responsive-4by3"></div>
+      </div>
+    </div>
   </div>
 </div>
 

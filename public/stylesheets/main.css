@@ -1,5 +1,5 @@
 .jumbotron {
-  background: #555 url('../images/diamond-1000.jpg') no-repeat center;
+  background: #555 url('../images/shawna-beach.jpg') no-repeat center;
   background-size: cover;
   color: white;
   padding-bottom: 80px; }
@@ -23,13 +23,39 @@
     height: 150px;
     margin: 0em auto;
      }
-    
+
+.navbar-right {
+  margin-right: 0;
+}
+
 .logo img {
   width: 227px; 
   display: block;
   margin: 1% auto;
 }
 
+.pano-description {
+  text-align: center;
+}
+.pano-description p {
+  padding-left: 2em;
+}
+
+@media (min-width: 768px) { 
+  .pano-description {
+    text-align: left;
+  }
+}
+
+footer {
+  background-color: #222;
+  color: #999;
+  bottom: 0;
+  width: 100%;
+  padding: 3em;
+  text-align: center;
+  margin-top: 3em;
+}
 
 #panorama {
     width: 100%;
