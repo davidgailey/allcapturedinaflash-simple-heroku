@@ -51,6 +51,10 @@
   .tele-button {font-size: 4vw;}
 }
 
+.modal-dialog {
+    width: auto;
+    margin: 10px;
+}
 
 footer {
   background-color: #222;
