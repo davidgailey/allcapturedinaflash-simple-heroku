@@ -34,6 +34,12 @@
   margin: 1% auto;
 }
 
+.pano-description, .pano-thumb {
+  padding-top: 0.5em
+  padding-bottom: 1em;
+
+}
+
 .pano-description {
   text-align: center;
 }
@@ -71,61 +77,61 @@ footer {
   top: -10px;
 }
 
-#panorama {
+.panorama-render {
     width: 100%;
     height: 300px;
 }
 
 @media (min-height: 400px) { 
-  #panorama {
+  .panorama-render {
     height: 370px;
   }
 }
 
 @media (min-height: 450px) { 
-  #panorama {
+  .panorama-render {
     height: 425px;
   }
 }
 
 @media (min-height: 500px) { 
-  #panorama {
+  .panorama-render {
     height: 475px;
   }
 }
 
 @media (min-height: 550px) { 
-  #panorama {
+  .panorama-render {
     height: 525px;
   }
 }
 
 @media (min-height: 600px) { 
-  #panorama {
+  .panorama-render {
     height: 575px;
   }
 }
 
 @media (min-height: 650px) { 
-  #panorama {
+  .panorama-render {
     height: 625px;
   }
 }
 
 @media (min-height: 768px) { 
-  #panorama {
+  .panorama-render {
     height: 730px;
   }
 }
 
 @media (min-height: 992px) { 
-  #panorama {
+  .panorama-render {
     height: 960px;
   }
 }
 
 @media (min-height: 1200px) { 
-  #panorama {
+  .panorama-render {
     height: 1100px;
   }
 }
