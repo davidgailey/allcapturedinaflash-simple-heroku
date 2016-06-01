@@ -25,10 +25,10 @@
     <div class="col-sm-6 pano-thumb">  
       <!-- Button trigger modal -->
 
-      <a href="#myModal" 
+      <a href="#diamond" 
          
         data-toggle="modal" 
-        data-target="#myModal">
+        data-target="#diamond">
           <img src="/images/diamond-500.jpg" 
             alt="Panorama of The Diamond in Hollidaysburg, Pa" 
             class="img-responsive img-thumbnail center-block"
@@ -40,6 +40,76 @@
       <p>"The Diamond" is historic Hollidaysburg’s central business district.  It is the heart of the community for parades, events and other happenings. </p>
     </div>
   </div> <!-- row -->
+
+
+
+  <div class="row">
+    
+    <div class="col-sm-6 pano-thumb">  
+      <!-- Button trigger modal -->
+
+      <a href="#living" 
+         
+        data-toggle="modal" 
+        data-target="#living">
+          <img src="/images/living-500.jpg" 
+            alt="" 
+            class="img-responsive img-thumbnail center-block"
+          />
+      </a>
+    </div>
+    <div class="col-sm-6 pano-description">
+      <h4><span class="glyphicon glyphicon-map-marker"></span> Livingroom/Kitchen, Beach Carousel Motel</h4>
+      <p></p>
+    </div>
+  </div> <!-- row -->
+
+
+    <div class="row">
+    
+    <div class="col-sm-6 pano-thumb">  
+      <!-- Button trigger modal -->
+
+      <a href="#bath" 
+         
+        data-toggle="modal" 
+        data-target="#bath">
+          <img src="/images/bath-500.jpg" 
+            alt="" 
+            class="img-responsive img-thumbnail center-block"
+          />
+      </a>
+    </div>
+    <div class="col-sm-6 pano-description">
+      <h4><span class="glyphicon glyphicon-map-marker"></span> Bathroom, Beach Carousel Motel</h4>
+      <p></p>
+    </div>
+  </div> <!-- row -->
+
+
+
+    <div class="row">
+    
+    <div class="col-sm-6 pano-thumb">  
+      <!-- Button trigger modal -->
+
+      <a href="#bed" 
+         
+        data-toggle="modal" 
+        data-target="#bed">
+          <img src="/images/bed-500.jpg" 
+            alt="" 
+            class="img-responsive img-thumbnail center-block"
+          />
+      </a>
+    </div>
+    <div class="col-sm-6 pano-description">
+      <h4><span class="glyphicon glyphicon-map-marker"></span> Bedroom, Beach Carousel Motel</h4>
+      <p></p>
+    </div>
+  </div> <!-- row -->
+
+
   <br><br><br><br>
   <!-- 
   
@@ -50,10 +120,10 @@
 
 <!-- Modal -->
 <div class="modal fade" 
-  id="myModal" 
+  id="diamond" 
   tabindex="-1" 
   role="dialog" 
-  aria-labelledby="myModalLabel"
+  aria-labelledby="mdiamondLabel"
   data-panorama="/images/diamondwm-4096.jpg">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
@@ -70,6 +140,62 @@
     </div>
   </div>
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" 
+  id="living" 
+  tabindex="-1" 
+  role="dialog" 
+  aria-labelledby="mdiamondLabel"
+  data-panorama="/images/living-4096.jpg">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div id="panorama" class="embed-responsive embed-responsive-4by3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" 
+  id="bath" 
+  tabindex="-1" 
+  role="dialog" 
+  aria-labelledby="mdiamondLabel"
+  data-panorama="/images/bath-4096.jpg">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div id="panorama" class="embed-responsive embed-responsive-4by3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" 
+  id="bed" 
+  tabindex="-1" 
+  role="dialog" 
+  aria-labelledby="mdiamondLabel"
+  data-panorama="/images/bed-4096.jpg">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div id="panorama" class="embed-responsive embed-responsive-4by3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 <% include ../partials/footer.ejs %>
 </body>
