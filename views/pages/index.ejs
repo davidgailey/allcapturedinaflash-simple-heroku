@@ -20,6 +20,29 @@
 </div>
 
 <div class="container">
+
+  <div class="row">
+    
+    <div class="col-sm-6 pano-thumb">  
+      <!-- Button trigger modal -->
+
+      <a href="#studio-lobby" 
+         
+        data-toggle="modal" 
+        data-target="#studio-lobby">
+          <img src="/images/studio-lobby-500.jpg" 
+            alt="This is the lobby outside of my studio in Hollidaysburg" 
+            class="img-responsive img-thumbnail center-block"
+          />
+      </a>
+    </div>
+    <div class="col-sm-6 pano-description">
+      <h4><span class="glyphicon glyphicon-map-marker"></span> My Studio, Hollidaysburg, Pa</h4>
+      <p>This is the lobby outside of my studio. It's called the Old Pat's Building, a late 1800's historic mansion in downtown Hollidaysburg. This particular entranceway showcases murals of the old canal basin nearby.</p>
+    </div>
+  </div> <!-- row -->
+  <hr>
+
   <div class="row">
     
     <div class="col-sm-6 pano-thumb">  
@@ -119,6 +142,23 @@
   </div>-->
 </div>
 
+<!-- Modal -->
+<div class="modal fade" 
+  id="studio-lobby" 
+  tabindex="0" 
+  role="dialog" 
+  aria-labelledby="mstudio-lobbyLabel"
+  data-panorama="/images/studio-lobby-4096.jpg"
+  data-renderid="studio-lobby-render">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div id="studio-lobby-render" class="panorama-render embed-responsive embed-responsive-4by3"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!-- Modal -->
@@ -149,7 +189,7 @@
 <!-- Modal -->
 <div class="modal fade" 
   id="living" 
-  tabindex="-1" 
+  tabindex="-2" 
   role="dialog" 
   aria-labelledby="mdiamondLabel"
   data-panorama="/images/living-4096.jpg"
@@ -168,7 +208,7 @@
 <!-- Modal -->
 <div class="modal fade" 
   id="bath" 
-  tabindex="-1" 
+  tabindex="-3" 
   role="dialog" 
   aria-labelledby="mdiamondLabel"
   data-panorama="/images/bath-4096.jpg"
@@ -186,7 +226,7 @@
 <!-- Modal -->
 <div class="modal fade" 
   id="bed" 
-  tabindex="-1" 
+  tabindex="-4" 
   role="dialog" 
   aria-labelledby="mdiamondLabel"
   data-panorama="/images/bed-4096.jpg"
