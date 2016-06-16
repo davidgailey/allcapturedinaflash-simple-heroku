@@ -43,6 +43,29 @@
   </div> <!-- row -->
   <hr>
 
+
+  <div class="row">
+    
+    <div class="col-sm-6 pano-thumb">  
+      <!-- Button trigger modal -->
+
+      <a href="#studio-office" 
+         
+        data-toggle="modal" 
+        data-target="#studio-office">
+          <img src="/images/studio-office-500.jpg" 
+            alt="This is the office of my studio in Hollidaysburg" 
+            class="img-responsive img-thumbnail center-block"
+          />
+      </a>
+    </div>
+    <div class="col-sm-6 pano-description">
+      <h4><span class="glyphicon glyphicon-map-marker"></span> My Studio, Hollidaysburg, Pa</h4>
+      <p>This is the office of my studio. Here's where consultations and photo reveal sessions happen.</p>
+    </div>
+  </div> <!-- row -->
+  <hr>
+
   <div class="row">
     
     <div class="col-sm-6 pano-thumb">  
@@ -155,6 +178,25 @@
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <div id="studio-lobby-render" class="panorama-render embed-responsive embed-responsive-4by3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" 
+  id="studio-office" 
+  tabindex="0" 
+  role="dialog" 
+  aria-labelledby="mstudio-officeLabel"
+  data-panorama="/images/studio-office-4096.jpg"
+  data-renderid="studio-office-render">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div id="studio-office-render" class="panorama-render embed-responsive embed-responsive-4by3"></div>
       </div>
     </div>
   </div>
