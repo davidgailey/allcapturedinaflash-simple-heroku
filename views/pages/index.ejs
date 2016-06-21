@@ -66,6 +66,30 @@
   </div> <!-- row -->
   <hr>
 
+
+  <div class="row">
+    
+    <div class="col-sm-6 pano-thumb">  
+      <!-- Button trigger modal -->
+
+      <a href="#studio-shooting-room" 
+         
+        data-toggle="modal" 
+        data-target="#studio-shooting-room">
+          <img src="/images/studio-shooting-room-500.jpg" 
+            alt="This is the office of my studio in Hollidaysburg" 
+            class="img-responsive img-thumbnail center-block"
+          />
+      </a>
+    </div>
+    <div class="col-sm-6 pano-description">
+      <h4><span class="glyphicon glyphicon-map-marker"></span> My Studio, Hollidaysburg, Pa</h4>
+      <p>This is the shooting room of my studio. Although I like to use natural light and outdoor locations as much as possible, indoor studio shots can allow for greater comfort for my guests.</p>
+    </div>
+  </div> <!-- row -->
+  <hr>
+
+
   <div class="row">
     
     <div class="col-sm-6 pano-thumb">  
@@ -201,6 +225,26 @@
     </div>
   </div>
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" 
+  id="studio-shooting-room" 
+  tabindex="0" 
+  role="dialog" 
+  aria-labelledby="mstudio-shooting-roomLabel"
+  data-panorama="/images/studio-shooting-room-4096.jpg"
+  data-renderid="studio-shooting-room-render">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div id="studio-shooting-room-render" class="panorama-render embed-responsive embed-responsive-4by3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <!-- Modal -->
