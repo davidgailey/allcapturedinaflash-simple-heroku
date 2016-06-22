@@ -26,68 +26,23 @@
     <div class="col-sm-6 pano-thumb">  
       <!-- Button trigger modal -->
 
-      <a href="#studio-lobby" 
+      <a href="#studio-tour" 
          
         data-toggle="modal" 
-        data-target="#studio-lobby">
+        data-target="#studio-tour">
           <img src="/images/studio-lobby-500.jpg" 
-            alt="This is the lobby outside of my studio in Hollidaysburg" 
+            alt="This is the tour of my studio in Hollidaysburg" 
             class="img-responsive img-thumbnail center-block"
           />
       </a>
     </div>
     <div class="col-sm-6 pano-description">
       <h4><span class="glyphicon glyphicon-map-marker"></span> My Studio, Hollidaysburg, Pa</h4>
-      <p>This is the lobby outside of my studio. It's called the Old Pat's Building, a late 1800's historic mansion in downtown Hollidaysburg. This particular entranceway showcases murals of the old canal basin nearby.</p>
+      <p>This is a 360 tour of my studio. It's located in the Old Pat's Building, a late 1800's historic mansion in downtown Hollidaysburg, Pa. This particular entryway showcases murals of the old canal basin nearby. My office is where consultations and photo reveal sessions happen. You can also take a peek at my shooting room.  Although I like to use natural light and outdoor locations as much as possible, indoor studio shoots can allow greater privacy and comfort for my guests.</p>
     </div>
   </div> <!-- row -->
   <hr>
 
-
-  <div class="row">
-    
-    <div class="col-sm-6 pano-thumb">  
-      <!-- Button trigger modal -->
-
-      <a href="#studio-office" 
-         
-        data-toggle="modal" 
-        data-target="#studio-office">
-          <img src="/images/studio-office-500.jpg" 
-            alt="This is the office of my studio in Hollidaysburg" 
-            class="img-responsive img-thumbnail center-block"
-          />
-      </a>
-    </div>
-    <div class="col-sm-6 pano-description">
-      <h4><span class="glyphicon glyphicon-map-marker"></span> My Studio, Hollidaysburg, Pa</h4>
-      <p>This is the office of my studio. Here's where consultations and photo reveal sessions happen.</p>
-    </div>
-  </div> <!-- row -->
-  <hr>
-
-
-  <div class="row">
-    
-    <div class="col-sm-6 pano-thumb">  
-      <!-- Button trigger modal -->
-
-      <a href="#studio-shooting-room" 
-         
-        data-toggle="modal" 
-        data-target="#studio-shooting-room">
-          <img src="/images/studio-shooting-room-500.jpg" 
-            alt="This is the office of my studio in Hollidaysburg" 
-            class="img-responsive img-thumbnail center-block"
-          />
-      </a>
-    </div>
-    <div class="col-sm-6 pano-description">
-      <h4><span class="glyphicon glyphicon-map-marker"></span> My Studio, Hollidaysburg, Pa</h4>
-      <p>This is the shooting room of my studio. Although I like to use natural light and outdoor locations as much as possible, indoor studio shots can allow for greater comfort for my guests.</p>
-    </div>
-  </div> <!-- row -->
-  <hr>
 
 
   <div class="row">
@@ -166,62 +121,112 @@
   </div>-->
 </div>
 
+<!--
+   __     __)                  
+  (, /|  /|       /)     /)    
+    / | / |  ____(/ _   //  _  
+ ) /  |/  |_(_)(_(_(_(_(/_ /_)_
+(_/   ' 
+
+-->
+
 <!-- Modal -->
 <div class="modal fade" 
-  id="studio-lobby" 
+  id="studio-tour" 
   tabindex="0" 
   role="dialog" 
-  aria-labelledby="mstudio-lobbyLabel"
-  data-panorama="/images/studio-lobby-4096.jpg"
-  data-renderid="studio-lobby-render">
+  aria-labelledby="mstudio-tourLabel"
+  data-tour
+  data-first-scene="lobby"
+  data-scenes='{
+        "lobby": {
+            "title": "Lobby",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "/images/studio-lobby-4096.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -25.7,
+                    "yaw": 115,
+                    "type": "scene",
+                    "text": "All Captured in a Flash Office",
+                    "sceneId": "office",
+                    "targetYaw": 38
+                }
+            ]
+        },
+
+        "office": {
+            "title": "Office",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": "/images/studio-office-4096.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -20.4,
+                    "yaw": 26.79,
+                    "type": "scene",
+                    "text": "All Captured in a Flash Shooting Room",
+                    "sceneId": "shooting-room",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -17.5,
+                    "yaw": 170,
+                    "type": "scene",
+                    "text": "Lobby",
+                    "sceneId": "lobby",
+                    "targetYaw": -124
+                }
+            ]
+        },
+
+        "shooting-room": {
+            "title": "Shooting Room",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": "/images/studio-shooting-room-4096.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -18.2,
+                    "yaw": 115.34,
+                    "type": "scene",
+                    "text": "All Captured in a Flash Office",
+                    "sceneId": "office",
+                    "targetYaw": -149
+                },
+                {
+                    "pitch": -20.24,
+                    "yaw": -4.34,
+                    "type": "info",
+                    "text": "Safe and comfortable infant poser for Newborns"
+                },
+                {
+                    "pitch": -11.97,
+                    "yaw": -97,
+                    "type": "info",
+                    "text": "One of many props for boudoir shoots"
+                }
+            ]
+        }
+      }'
+  data-renderid="studio-tour-render">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <div id="studio-lobby-render" class="panorama-render embed-responsive embed-responsive-4by3"></div>
+        <div id="studio-tour-render" class="panorama-render embed-responsive embed-responsive-4by3"></div>
       </div>
     </div>
   </div>
 </div>
-
-
-<!-- Modal -->
-<div class="modal fade" 
-  id="studio-office" 
-  tabindex="0" 
-  role="dialog" 
-  aria-labelledby="mstudio-officeLabel"
-  data-panorama="/images/studio-office-4096.jpg"
-  data-renderid="studio-office-render">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <div id="studio-office-render" class="panorama-render embed-responsive embed-responsive-4by3"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Modal -->
-<div class="modal fade" 
-  id="studio-shooting-room" 
-  tabindex="0" 
-  role="dialog" 
-  aria-labelledby="mstudio-shooting-roomLabel"
-  data-panorama="/images/studio-shooting-room-4096.jpg"
-  data-renderid="studio-shooting-room-render">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <div id="studio-shooting-room-render" class="panorama-render embed-responsive embed-responsive-4by3"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 
 <!-- Modal -->
@@ -285,8 +290,6 @@
     </div>
   </div>
 </div>
-
-
 
 
 <% include ../partials/footer.ejs %>
