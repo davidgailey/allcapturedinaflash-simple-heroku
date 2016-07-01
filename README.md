@@ -12,6 +12,15 @@ Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https
 $ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
 $ cd node-js-getting-started
 $ npm install
+```
+
+Then build with webpack with 
+
+```sh
+$ npm run compile
+```
+Finally, start a local node server
+```sh
 $ npm start
 ```
 
