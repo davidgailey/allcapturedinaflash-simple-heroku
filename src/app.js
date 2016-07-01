@@ -1,18 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Lightbox from 'react-images';
-//import Gallery from 'react-photo-gallery';
+import Gallery from 'react-photo-gallery';
 import $ from 'jquery';
 import _ from 'lodash';
-import Gallery from './Gallery';
 
 class App extends React.Component{
     constructor(){
-        super();
+	super();
         this.state = {photos:null, pageNum:1, totalPages:1, loadedAll: false};
 
-        this.handleScroll = this.handleScroll.bind(this);
-        this.loadMorePhotos = this.loadMorePhotos.bind(this);
+	this.handleScroll = this.handleScroll.bind(this);
+	this.loadMorePhotos = this.loadMorePhotos.bind(this);
     }
     componentDidMount() {
         this.loadMorePhotos();
@@ -28,10 +27,10 @@ class App extends React.Component{
         if (e){
             e.preventDefault();
         }
-        if (this.state.pageNum > this.state.totalPages){
-            this.setState({loadedAll: true});
-            return;
-        }
+	if (this.state.pageNum > this.state.totalPages){
+	    this.setState({loadedAll: true});
+	    return;
+	}
         $.ajax({
           url: 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=372ef3a005d9b9df062b8240c326254d&photoset_id=72157631971715898&user_id=57933175@N08&format=json&per_page=21&page='+this.state.pageNum+'&extras=url_o,url_m,url_l,url_c',
           dataType: 'jsonp',
@@ -48,11 +47,11 @@ class App extends React.Component{
                     lightboxImage:{src: obj.url_l, caption: obj.title}
                 };
             });
-        this.setState({
-        photos: this.state.photos ? this.state.photos.concat(photos) : photos,
-        pageNum: this.state.pageNum + 1,
-        totalPages: data.photoset.pages
-        });
+	    this.setState({
+		photos: this.state.photos ? this.state.photos.concat(photos) : photos,
+		pageNum: this.state.pageNum + 1,
+		totalPages: data.photoset.pages
+	    });
           }.bind(this),
           error: function(xhr, status, err) {
             console.error(status, err.toString());
@@ -60,32 +59,32 @@ class App extends React.Component{
         });
     }
     renderGallery(){
-        return(
-            <Gallery photos={this.state.photos} />
-        );
+	return(
+	    <Gallery photos={this.state.photos} />
+	);
     }
     render(){
-        // no loading sign if its all loaded
+	// no loading sign if its all loaded
         if (this.state.photos && this.state.loadedAll){
             return(
-                <div className="App">
-                    {this.renderGallery()}
-                </div>
+		<div className="App">
+		    {this.renderGallery()}
+		</div>
             );
         }
-        else if (this.state.photos){
-            return(
-                <div className="App">
-                    {this.renderGallery()}
-                    <div className="loading-msg" id="msg-loading-more">Loading</div>
-                </div>
-            );
-        }
+	else if (this.state.photos){
+	    return(
+		<div className="App">
+		    {this.renderGallery()}
+			<div className="loading-msg" id="msg-loading-more">Loading</div>
+		</div>
+	    );
+	}
         else{
             return(
-                <div className="App">
-                    <div id="msg-app-loading" className="loading-msg">Loading</div>
-                </div>
+		<div className="App">
+			<div id="msg-app-loading" className="loading-msg">Loading</div>
+		</div>
             );
         }
     }
