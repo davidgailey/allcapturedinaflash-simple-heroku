@@ -28,5 +28,9 @@ var config = {
       path.join(__dirname, 'node_modules'),
     ],
   },
+  // externals: {
+  //   // require("facebook") is external and available on the global var FB
+  //   "facebook": "FB"
+  // },
 };
 module.exports = config;

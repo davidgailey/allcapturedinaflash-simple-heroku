@@ -89,6 +89,8 @@
 	//import Gallery from 'react-photo-gallery';
 
 
+	// import FB from 'facebook';
+
 	var App = function (_React$Component) {
 	    _inherits(App, _React$Component);
 
@@ -128,31 +130,36 @@
 	                this.setState({ loadedAll: true });
 	                return;
 	            }
-	            _jquery2.default.ajax({
-	                url: 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=372ef3a005d9b9df062b8240c326254d&photoset_id=72157631971715898&user_id=57933175@N08&format=json&per_page=21&page=' + this.state.pageNum + '&extras=url_o,url_m,url_l,url_c',
-	                dataType: 'jsonp',
-	                jsonpCallback: 'jsonFlickrApi',
-	                cache: false,
-	                success: function (data) {
-	                    var photos = data.photoset.photo.map(function (obj, i) {
-	                        var aspectRatio = parseFloat(obj.width_o / obj.height_o);
-	                        return {
-	                            src: aspectRatio >= 3 ? obj.url_c : obj.url_m,
-	                            width: parseInt(obj.width_o),
-	                            height: parseInt(obj.height_o),
-	                            aspectRatio: aspectRatio,
-	                            lightboxImage: { src: obj.url_l, caption: obj.title }
-	                        };
-	                    });
-	                    this.setState({
-	                        photos: this.state.photos ? this.state.photos.concat(photos) : photos,
-	                        pageNum: this.state.pageNum + 1,
-	                        totalPages: data.photoset.pages
-	                    });
-	                }.bind(this),
-	                error: function (xhr, status, err) {
-	                    console.error(status, err.toString());
-	                }.bind(this)
+
+	            // $.ajax({
+	            //     url: 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=372ef3a005d9b9df062b8240c326254d&photoset_id=72157631971715898&user_id=57933175@N08&format=json&per_page=21&page='+this.state.pageNum+'&extras=url_o,url_m,url_l,url_c',
+	            //     dataType: 'jsonp',
+	            //     jsonpCallback: 'jsonFlickrApi',
+	            //     cache: false,
+	            //     success: function(data) {
+	            //         let photos = data.photoset.photo.map(function(obj,i){
+	            //             let aspectRatio = parseFloat(obj.width_o / obj.height_o);
+	            //             return {
+	            //                 src: (aspectRatio >= 3) ? obj.url_c : obj.url_m,
+	            //                 width: parseInt(obj.width_o),
+	            //                 height: parseInt(obj.height_o),
+	            //                 aspectRatio: aspectRatio,
+	            //                 lightboxImage:{src: obj.url_l, caption: obj.title}
+	            //             };
+	            //         });
+	            //         this.setState({
+	            //             photos: this.state.photos ? this.state.photos.concat(photos) : photos,
+	            //             pageNum: this.state.pageNum + 1,
+	            //             totalPages: data.photoset.pages
+	            //         });
+	            //     }.bind(this),
+	            //     error: function(xhr, status, err) {
+	            //         console.error(status, err.toString());
+	            //     }.bind(this)
+	            // });
+
+	            FB.api('/me', { fields: 'last_name' }, function (response) {
+	                console.log(response);
 	            });
 	        }
 	    }, {
@@ -200,7 +207,29 @@
 
 	;
 
-	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
+	// ReactDOM.render(<App />, document.getElementById('app'));
+
+	window.fbAsyncInit = function () {
+	    FB.init({
+	        appId: '2062291893996813',
+	        xfbml: true,
+	        version: 'v2.6'
+	    });
+
+	    // make sure facebook sdk is loaded before react render
+	    _reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
+	};
+
+	(function (d, s, id) {
+	    var js,
+	        fjs = d.getElementsByTagName(s)[0];
+	    if (d.getElementById(id)) {
+	        return;
+	    }
+	    js = d.createElement(s);js.id = id;
+	    js.src = "//connect.facebook.net/en_US/sdk.js";
+	    fjs.parentNode.insertBefore(js, fjs);
+	})(document, 'script', 'facebook-jssdk');
 
 /***/ },
 /* 2 */
